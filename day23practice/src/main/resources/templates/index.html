@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose Beer Style</title>
+</head>
+<body>
+    <!--select and options to create the dropdown list-->
+    <h1> Choose Your Beer Style </h1>
+    <!-- define the object in data-th-each, where s is the object. 
+        For s in styles...
+        Get the data-th-value from sql and show it in text-->
+    <form method = "GET" action = "/breweries">
+        <select name="beerStyle">
+            <option data-th-each="s: ${styles}" data-th-value="${s.id}" data-th-text="${s.name}">
+
+            </option>
+        </select>
+        <button>Search</button>
+
+    </form>
+    
+</body>
+</html>

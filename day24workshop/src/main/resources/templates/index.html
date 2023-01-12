@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders</title>
+</head>
+<body>
+
+    <h3>User's Order Information</h3>
+    <form method="post" action = "/addOrderInfo">
+        <table border="1">
+            <tr>
+                <td>Order Date:</td>
+                <!--date will format into yyyy-mm-dd which is ok-->
+                <td><input type="date" name="order_date" placeholder="YYYY-MM-DD"></td>
+            </tr>
+            <tr>
+                <td>Customer Name:</td>
+                <td><input type="text" name="customer_name" placeholder="Enter Name"></td>
+            </tr>
+
+            <tr>
+                <td>Shipping Address:</td>
+                <td><input type="text" name="ship_address" placeholder="Enter Address"></td>
+            </tr>
+            <tr>
+                <td>Notes:</td>
+                <td><input type="text" name="notes" placeholder="Enter Notes"></td>
+            </tr>
+            <tr>
+                <td>Tax:</td>
+                <td><input type="text" name="tax" min = "0.05" value = "0.05" placeholder="Enter Tax"></td>
+            </tr>
+            <tr>
+                <td> <button type="submit">Add</button></td>
+            </tr>
+        </table>
+
+        
+    </form>
+
+    
+</body>
+</html>

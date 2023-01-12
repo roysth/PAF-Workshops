@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SHOW RESULTS</title>
+</head>
+<body>
+    <h1>Search Results</h1>
+
+    <h4>
+        Queries For: <span data-th-text="${keyword}"></span>
+        Score: <span data-th-text="${score}"></span>
+    </h4>
+
+    <table>
+        <tr data-th-each="r.${results}">
+            <td>
+                <div>User: <span data-th-text="${r.user}"></span></div>
+                <div>Rating: <span data-th-text="${r.rating}"></span></div>
+                <div>Score: <span data-th-text="${r.score}"></span></div>
+                <div>Text: <span data-th-text="${r.text}"></span></div>
+            </td>
+
+
+        </tr>
+
+    </table>
+
+
+
+
+
+
+    
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <div data-th-each="h: ${heroes}">
+                    <table border="1">
+                        <tr>
+                            <td>ID:</td>
+                            <td>
+                                <span data-th-text="${h.id}"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Name:</td>
+                            <td>
+                                <span data-th-text="${h.name}"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Description:</td>
+                            <td>
+                                <span data-th-text="${h.description}"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Details:</td>
+                            <td>
+                                <!-- data-th-href is for you to click and go to other page-->
+                                <!-- so still need the data-th-text-->
+                                <a data-th-href="${h.details}"><span data-th-text="${h.details}"></span></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Image:</td>
+                            <td>
+                                <img data-th-src="${h.image}">
+                            </td>
+                        </tr>
+
+                 
+
+                    </table>
+                    
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+</body>
+</html>

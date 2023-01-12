@@ -1,0 +1,13 @@
+TASK:
+
+TEXT SEARCH + INSERT
+
+User to key in the key words they want to search (With limit and skip) + choose the score they want.
+
+Program will search MongoDB for the specific texts and score and show it in another html page
+
+What the user has searched will be iserted into a new schema 
+
+
+Uses cloud db:
+spring.data.mongodb.uri=mongodb+srv://roy:royroy@mycluster.t3uqbdw.mongodb.net/retryWrites=true&w=majority

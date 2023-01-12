@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Enter Order Details:</h3>
+        <form method = "post" action = "/addDetails">
+            <table border="1">
+                <tr>
+                    <td>Product Name:</td>
+                    <td><input type="text" name="product" placeholder="Enter Product"></td>
+                </tr>
+                <tr>
+                    <td>Unit Price:</td>
+                    <td><input type="number" name="unit_price" placeholder="Enter Unit Price"></td>
+                </tr>
+                <tr>
+                    <td>Discount:</td>
+                    <td><input type="number" name="discount" placeholder="Enter Discount"></td>
+                </tr>
+                <tr>
+                    <td>Quantity:</td>
+                    <td><input type="number" name="quantity" placeholder="Enter Quantity"></td>
+                </tr>
+                <tr>
+                    <td> <button type="submit">Add Order Details To List</button></td>
+                </tr>
+            </table>
+        </form>
+
+        <h3>List Of Order Details To Be Added:</h3>
+        
+        <table border="1">
+            <tr>
+                <td>Product Name:</td>
+                <td>Unit Price:</td>
+                <td>Discount:</td>
+                <td>Quantity:</td>
+
+            </tr>
+            <tr data-th-each="d: ${orderDetailsList}">
+                <td><span data-th-text="${d.product}"></span></td>
+                <td><span data-th-text="${d.unit_price}"></span></td>
+                <td><span data-th-text="${d.discount}"></span></td>
+                <td><span data-th-text="${d.quantity}"></span></td>
+            </tr>
+            <tr>
+                <td>
+                    <form method="POST" action="/submit">
+                        <button type="submit">Submit</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+    
+</body>
+</html>
