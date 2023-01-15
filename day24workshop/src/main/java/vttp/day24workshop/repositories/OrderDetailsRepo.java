@@ -41,6 +41,7 @@ public class OrderDetailsRepo {
     }
 
     //Get the details from the user input to use the above method to add into SQL
+    //This is required because the above method requires 2 inputs - orderDetailsList and orderId
     public void addOrderDetails (Orders order) {
         addOrderDetails(order.getOrderDetailsList(), order.getOrderId());
     }
